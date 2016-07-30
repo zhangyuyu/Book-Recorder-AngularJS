@@ -1,26 +1,26 @@
-<form>
+<form ng-submit="vm.submit(vm.form)">
     <div>
         <label for="_email">邮箱</label>
-        <input id="_email" type="text"/>
+        <input id="_email" type="email" ng-model="vm.form.email"/>
     </div>
     <div>
         <label for="_name">昵称</label>
-        <input id="_name" type="text"/>
+        <input id="_name" type="text" ng-model="vm.form.name"/>
     </div>
     <div>
         <label for="_password">密码</label>
-        <input id="_password" type="password"/>
+        <input id="_password" type="password" ng-model="vm.form.password"/>
     </div>
     <div>
         <label for="_retypedPassword">确认密码</label>
-        <input id="_retypedPassword" type="password"/>
+        <input id="_retypedPassword" type="password" ng-model="vm.retypedPassword"/>
     </div>
     <div>
-        <input id="_accepted" type="checkbox"/>
+        <input id="_accepted" type="checkbox" ng-model="vm.accepted"/>
         <label for="_accepted">
             我已阅读并同意
             <a href>《网站服务协议》</a>
         </label>
     </div>
-    <button>注册</button>
+    <button type="submit">注册</button>
 </form>
