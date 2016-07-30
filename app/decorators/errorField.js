@@ -12,7 +12,7 @@ angular.module('app').directive('userFieldError', function userFieldError($compi
       subScope.errors = function() {
         return ngModel.$error;
       };
-      var hint = $compile('<ul class="user-field-error" ng-if="hasError()">{{errors()}}</ul>')(subScope);
+      var hint = $compile('<ul class="user-field-error" ng-if="hasError()"><li ng-repeat="(name, wrong) in errors()" ng-if="wrong">{{name|error}}</li></ul>')(subScope);
       element.after(hint);
     }
   };
