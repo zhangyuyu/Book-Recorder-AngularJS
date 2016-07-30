@@ -20,4 +20,16 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   });
 
   $urlRouterProvider.otherwise('/notFound');
+
+  $stateProvider.state('user', {
+    url: '/user',
+    template: '<div ui-view></div>',
+    abstract: true
+  });
+
+  $stateProvider.state('user.create', {
+    url: '/create',
+    templateUrl: 'controllers/user/create.html',
+    controller: 'UserCreateCtrl as vm'
+  });
 });
