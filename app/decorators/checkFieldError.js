@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').directive('userFieldError', function userFieldError($compile) {
+angular.module('app').directive('apiFieldError', function apiFieldError($compile) {
   return {
     restrict: 'A',
     require: 'ngModel',
@@ -12,7 +12,7 @@ angular.module('app').directive('userFieldError', function userFieldError($compi
       subScope.errors = function() {
         return ngModel.$error;
       };
-      var hint = $compile('<ul class="user-field-error" ng-if="hasError()"><li ng-repeat="(name, wrong) in errors()" ng-if="wrong">{{name|error}}</li></ul>')(subScope);
+      var hint = $compile('<ul class="api-field-error" ng-if="hasError()"><li ng-repeat="(name, wrong) in errors()" ng-if="wrong">{{name|error}}</li></ul>')(subScope);
       element.after(hint);
     }
   };

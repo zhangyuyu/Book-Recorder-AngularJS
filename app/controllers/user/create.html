@@ -1,22 +1,22 @@
 <form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate">
     <div>
         <label for="_email">邮箱</label>
-        <input id="_email" user-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
+        <input id="_email" api-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
     </div>
     <div>
         <label for="_name">昵称</label>
-        <input id="_name" user-field-error type="text" ng-required="true" ng-model="vm.form.name"/>
+        <input id="_name" api-field-error type="text" ng-required="true" ng-model="vm.form.name"/>
     </div>
     <div>
         <label for="_password">密码</label>
-        <input id="_password" user-field-error type="password" ng-required="true" ng-model="vm.form.password"/>
+        <input id="_password" api-field-error type="password" ng-required="true" ng-model="vm.form.password"/>
     </div>
     <div>
         <label for="_retypedPassword">确认密码</label>
-        <input id="_retypedPassword" user-field-error type="password" ng-required="true" ng-model="vm.retypedPassword"/>
+        <input id="_retypedPassword" api-field-error type="password" ng-required="true" ng-model="vm.retypedPassword" api-check-same-as="vm.form.password" />
     </div>
     <div>
-        <input id="_accepted" type="checkbox" user-field-error ng-required="true" ng-model="vm.accepted"/>
+        <input id="_accepted" type="checkbox" ng-required="true" ng-model="vm.accepted"/>
         <label for="_accepted">
             我已阅读并同意
             <a href>《网站服务协议》</a>
