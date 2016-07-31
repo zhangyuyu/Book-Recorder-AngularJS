@@ -32,4 +32,10 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: 'controllers/user/create.html',
     controller: 'UserCreateCtrl as vm'
   });
+
+  $stateProvider.state('user.login', {
+    url: '/login',
+    templateUrl: 'controllers/user/login.html',
+    controller: 'UserLoginCtrl as vm'
+  });
 });
