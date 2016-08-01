@@ -8,7 +8,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('home', {
-    url: '/',
+    url: '/home/:name',
     templateUrl: 'controllers/home/index.html',
     controller: 'HomeIndexCtrl'
   });
