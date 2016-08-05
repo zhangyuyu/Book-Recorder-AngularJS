@@ -1,26 +1,33 @@
-<form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate">
-    <div>
-        <label for="_email">邮箱</label>
-        <input id="_email" api-field-error type="email" ng-required="true" ng-model="vm.form.email"/>
-    </div>
-    <div>
-        <label for="_name">昵称</label>
-        <input id="_name" api-field-error type="text" ng-required="true" ng-model="vm.form.name"/>
-    </div>
-    <div>
-        <label for="_password">密码</label>
-        <input id="_password" api-field-error type="password" ng-required="true" ng-model="vm.form.password"/>
-    </div>
-    <div>
-        <label for="_retypedPassword">确认密码</label>
-        <input id="_retypedPassword" api-field-error type="password" ng-required="true" ng-model="vm.retypedPassword" api-check-same-as="vm.form.password" />
-    </div>
-    <div>
-        <input id="_accepted" type="checkbox" ng-required="true" ng-model="vm.accepted"/>
-        <label for="_accepted">
-            我已阅读并同意
-            <a href>《网站服务协议》</a>
-        </label>
-    </div>
-    <button type="submit" ng-disabled="form.$invalid">注册</button>
-</form>
+<div class="container">
+    <form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate" class="form-signin">
+        <div>
+            <label for="_email" form-control class="sr-only">邮箱</label>
+            <input id="_email" api-field-error type="email" ng-required="true" ng-model="vm.form.email"
+                   class="form-control" placeholder="邮箱" autofocus/>
+        </div>
+        <div>
+            <label for="_name" class="sr-only">昵称</label>
+            <input id="_name" api-field-error type="text" ng-required="true" ng-model="vm.form.name"
+                   class="form-control" placeholder="昵称" autofocus/>
+        </div>
+        <div>
+            <label for="_password" class="sr-only">密码</label>
+            <input id="_password" api-field-error type="password" ng-required="true" ng-model="vm.form.password"
+                   class="form-control" placeholder="密码" autofocus/>
+        </div>
+        <div>
+            <label for="_retypedPassword" class="sr-only">确认密码</label>
+            <input id="_retypedPassword" api-field-error api-check-same-as="vm.form.password" type="password"
+                   ng-required="true"
+                   ng-model="vm.retypedPassword" class="form-control" placeholder="确认密码" autofocus/>
+        </div>
+        <div class="checkbox">
+            <label for="_accepted">
+                <input id="_accepted" type="checkbox" ng-required="true" ng-model="vm.accepted"/>
+                我已阅读并同意
+                <a href>《网站服务协议》</a>
+            </label>
+        </div>
+        <button type="submit" ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block">注册</button>
+    </form>
+</div>

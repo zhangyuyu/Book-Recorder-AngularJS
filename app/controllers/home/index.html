@@ -1,18 +1,15 @@
-<div class="container">
+<div class="header clearfix">
+    <nav>
+        <ul class="nav nav-pills pull-right">
+            <li><a ng-if="vm.anonymous" ng-click="vm.login()">Login</a></li>
+            <li><a ng-if="!vm.anonymous">Records</a></li>
+            <li><a ng-if="!vm.anonymous">Add Book</a></li>
+            <li><a ng-click="vm.signUp()">Sign up</a></li>
+        </ul>
+    </nav>
+</div>
 
-    <div class="header clearfix">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li><a ng-if="vm.login">Login</a></li>
-                <li><a ng-if="!vm.login">Records</a></li>
-                <li><a ng-if="!vm.login">Add Book</a></li>
-                <li><a>Sign up</a></li>
-            </ul>
-    </div>
-
-    <div class="starter-template">
-        <h3>Hello, {{vm.name}}!</h3>
-        <p class="lead">Welcome to the book recorder!</p>
-    </div>
-
+<div class="jumbotron">
+    <h3>Hello, {{vm.name}}!</h3>
+    <p class="lead">Welcome to the book recorder!</p>
 </div>
