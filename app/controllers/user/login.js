@@ -6,7 +6,7 @@ angular.module('app').controller('UserLoginCtrl', function UserLoginCtrl(UserSer
   UserService.get({email: vm.form.email, password: vm.form.password},
         function (user) {
             alert(user.name + '登陆成功!');
-            $state.go('home', {name: user.name});
+            $state.go('home', {name: user.name, email: user.email});
         },
         function (res) {
           console.log(res.data);

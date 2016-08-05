@@ -1,0 +1,26 @@
+<div class="container">
+    <form name="form" ng-submit="vm.submit(vm.form)" novalidate="novalidate" class="form-signin">
+        <div>
+            <label for="_title" form-control class="sr-only">标题</label>
+            <input id="_title" api-field-error type="text" ng-required="true" ng-model="vm.form.title"
+                   class="form-control" placeholder="标题" autofocus/>
+        </div>
+        <div>
+            <label for="_author" class="sr-only">作者</label>
+            <input id="_author" api-field-error type="text" ng-required="true" ng-model="vm.form.author"
+                   class="form-control" placeholder="作者" autofocus/>
+        </div>
+        <div>
+            <label for="_category" class="sr-only">分类</label>
+            <input id="_category" api-field-error type="text" ng-required="true" ng-model="vm.form.category"
+                   class="form-control" placeholder="分类" autofocus/>
+        </div>
+        <div>
+            <label for="_comment" class="sr-only">感想</label>
+            <input id="_comment" api-field-error type="text" ng-required="true" ng-model="vm.form.comment"
+                   class="form-control comment" placeholder="感想" autofocus/>
+        </div>
+
+        <button type="submit" ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block">添加书本</button>
+    </form>
+</div>

@@ -8,7 +8,7 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('home', {
-    url: '/home/:name',
+    url: '/home/:name/:email',
     templateUrl: 'controllers/home/index.html',
     controller: 'HomeIndexCtrl as vm'
   });
@@ -37,5 +37,17 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     url: '/login',
     templateUrl: 'controllers/user/login.html',
     controller: 'UserLoginCtrl as vm'
+  });
+
+  $stateProvider.state('book', {
+    url: '/user/:email/book',
+    template: '<div ui-view></div>',
+    abstract: true
+  })
+
+  $stateProvider.state('book.create', {
+    url: '/create',
+    templateUrl: 'controllers/book/create.html',
+    controller: 'BookCreateCtrl as vm'
   });
 });

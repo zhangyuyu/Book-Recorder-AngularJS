@@ -3,7 +3,7 @@
         <ul class="nav nav-pills pull-right">
             <li><a ng-if="vm.anonymous" ng-click="vm.login()">Login</a></li>
             <li><a ng-if="!vm.anonymous">Records</a></li>
-            <li><a ng-if="!vm.anonymous">Add Book</a></li>
+            <li><a ng-if="!vm.anonymous" ng-click="vm.addBook()">Add Book</a></li>
             <li><a ng-click="vm.signUp()">Sign up</a></li>
         </ul>
     </nav>

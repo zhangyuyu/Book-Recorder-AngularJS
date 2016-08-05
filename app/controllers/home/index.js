@@ -2,7 +2,6 @@
 
 angular.module('app').controller('HomeIndexCtrl', function HomeIndexCtrl($stateParams, $state) {
     var vm = this;
-
     vm.name = $stateParams.name || 'Anonymous';
     vm.anonymous = vm.name === 'Anonymous';
 
@@ -11,5 +10,8 @@ angular.module('app').controller('HomeIndexCtrl', function HomeIndexCtrl($stateP
     };
     vm.signUp = function(){
         $state.go('user.create');
+    };
+    vm.addBook = function(){
+        $state.go('book.create', {email: $stateParams.email});
     };
 });
