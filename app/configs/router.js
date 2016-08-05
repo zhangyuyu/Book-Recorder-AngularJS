@@ -4,13 +4,13 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('default', {
     url: '',
     templateUrl: 'controllers/home/index.html',
-    controller: 'HomeIndexCtrl'
+    controller: 'HomeIndexCtrl as vm'
   });
 
   $stateProvider.state('home', {
     url: '/home/:name',
     templateUrl: 'controllers/home/index.html',
-    controller: 'HomeIndexCtrl'
+    controller: 'HomeIndexCtrl as vm'
   });
 
   $stateProvider.state('notFound', {
