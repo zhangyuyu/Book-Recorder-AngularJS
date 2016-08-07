@@ -3,13 +3,13 @@
 angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('default', {
     url: '',
-    templateUrl: 'controllers/home/index.html',
+    templateUrl: 'controllers/home/home.html',
     controller: 'HomeIndexCtrl as vm'
   });
 
   $stateProvider.state('home', {
     url: '/home/:name/:email',
-    templateUrl: 'controllers/home/index.html',
+    templateUrl: 'controllers/home/home.html',
     controller: 'HomeIndexCtrl as vm'
   });
 
@@ -27,10 +27,10 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     abstract: true
   });
 
-  $stateProvider.state('user.create', {
-    url: '/create',
-    templateUrl: 'controllers/user/create.html',
-    controller: 'UserCreateCtrl as vm'
+  $stateProvider.state('user.signUp', {
+    url: '/signUp',
+    templateUrl: 'controllers/user/signUp.html',
+    controller: 'UserSignUpCtrl as vm'
   });
 
   $stateProvider.state('user.login', {

@@ -8,8 +8,11 @@ angular.module('app').controller('HomeIndexCtrl', function HomeIndexCtrl($stateP
     vm.login = function(){
         $state.go('user.login');
     };
+    vm.logout = function(){
+        $state.go('default');
+    };
     vm.signUp = function(){
-        $state.go('user.create');
+        $state.go('user.signUp');
     };
     vm.addBook = function(){
         $state.go('book.create', {email: $stateParams.email});
