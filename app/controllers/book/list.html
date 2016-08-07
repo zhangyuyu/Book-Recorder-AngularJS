@@ -1,0 +1,16 @@
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>标题</th>
+            <th>作者</th>
+            <th>分类</th>
+            <th>感想</th>
+        </tr>
+        <tr ng-repeat="book in vm.books">
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.comment}}</td>
+        </tr>
+    </table>
+</div>

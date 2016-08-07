@@ -50,4 +50,10 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: 'controllers/book/create.html',
     controller: 'BookCreateCtrl as vm'
   });
+
+  $stateProvider.state('book.list', {
+    url: '/list',
+    templateUrl: 'controllers/book/list.html',
+    controller: 'BookListCtrl as vm'
+  });
 });
